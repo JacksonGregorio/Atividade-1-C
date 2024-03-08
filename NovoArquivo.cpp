@@ -9,13 +9,13 @@ public:
 
     bool reservarPoltrona(int fileira, int coluna) {
         if (fileira <= 0 || fileira > poltronas.size() - 1 || coluna <= 0 || coluna > poltronas[1].size() - 1) {
-            std::cout << "Número de poltrona inválido.\n";
+            std::cout << "Namero de poltrona invalido.\n";
             std::cout << fileira << std::endl;
             std::cout << coluna << std::endl;
             return false;
         }
         if (poltronas[fileira][coluna]) {
-            std::cout << "Poltrona já reservada.\n";
+            std::cout << "Poltrona ja reservada.\n";
             return false;
         }
         poltronas[fileira][coluna] = true;
@@ -55,7 +55,7 @@ int main() {
     Bilheteria bilheteria(15, 40);
     int opcao, fileira, coluna;
     while (true) {
-        std::cout << "0. Finalizar\n1. Reservar poltrona\n2. Mostrar ocupação\n3. Mostrar faturamento\n";
+        std::cout << "0. Finalizar\n1. Reservar poltrona\n2. Mostrar ocupaï¿½ï¿½o\n3. Mostrar faturamento\n";
         std::cin >> opcao;
         switch (opcao) {
         case 0:
@@ -72,7 +72,7 @@ int main() {
             bilheteria.mostrarFaturamento();
             break;
         default:
-            std::cout << "Opção inválida.\n";
+            std::cout << "Opcao invalida.\n";
         }
     }
     return 0;
